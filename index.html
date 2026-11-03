@@ -127,6 +127,16 @@ a{color:var(--brand)}
 .studio .mail{max-width:680px}
 .studio .btn{width:100%}
 .studio .tiny{max-width:680px;margin-top:14px}
+.mail{margin-top:22px;padding:22px 22px 20px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+.mail h4{font:700 20px/1.3 var(--serif);margin:0 0 6px}
+.mail p{margin:0 0 14px;color:var(--muted)}
+.mail .btn{min-height:50px}
+.mdl{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(28,22,40,.62)}
+.mdl.on{display:flex}
+.mdl .box{position:relative;width:100%;max-width:520px;height:min(640px,calc(100dvh - 32px));background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(28,22,40,.35)}
+.mdl iframe{width:100%;height:100%;border:0;display:block}
+.mdl .x{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:999px;border:0;background:var(--soft);color:var(--ink);font:600 20px var(--sans);cursor:pointer}
+.mdl .x:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
 .test{background:var(--soft);padding:clamp(24px,4vw,40px);margin-top:36px}
 .q{font:700 clamp(22px,3.2vw,28px)/1.28 var(--serif);margin:10px 0 18px;text-wrap:balance}
 .opts{display:grid;gap:8px}
@@ -175,7 +185,7 @@ footer .links a{display:inline-block;padding-block:12px}
   <div class="lab">Kit Sistema 7 Días</div>
   <h1 style="margin-top:22px;max-width:11em">Tu primer producto digital, <em>listo para vender</em> en siete días.</h1>
   <p class="sub">Un sistema paso a paso donde la IA hace el trabajo pesado y tú decides: un producto digital descargable, tu cobro y tu página. Sin teoría ni promesas de dinero fácil.</p>
-  <div class="cta"><a class="btn" href="#comprar">Quiero el Kit · $29 USD</a><a class="btn line" href="#test">Hacer el test gratis</a></div>
+  <div class="cta"><a class="btn" href="#comprar">Quiero el Kit</a><a class="btn line" href="#test">Hacer el test gratis</a></div>
   <ul class="facts"><li>Pago único</li><li>PDF de 44 páginas</li><li>19 prompts</li><li>Sin suscripción</li></ul>
   <p class="by">Por Domenico El Ali</p>
  </section>
@@ -218,7 +228,7 @@ footer .links a{display:inline-block;padding-block:12px}
    <div class="day" data-n="6"><div class="n">6</div><div><div class="vb">Publica · Día 6</div><h3>Publicar y automatizar <span class="here">Empieza aquí</span></h3><p>Al terminar tienes tres piezas sin cámara, tres correos y enlaces que miden.</p></div></div>
    <div class="day" data-n="7"><div class="n">7</div><div><div class="vb">Mejora · Día 7</div><h3>Medir y diagnosticar <span class="here">Te sirve</span></h3><p>Al terminar tienes tus cifras (aunque sean ceros), un diagnóstico y un solo cambio para la semana siguiente.</p></div></div>
   </div>
-  <div class="cta"><a class="btn" href="#comprar">Quiero el Kit · $29 USD</a></div>
+  <div class="cta"><a class="btn" href="#comprar">Quiero el Kit</a></div>
  </section>
 </div>
 <hr class="rule">
@@ -285,7 +295,7 @@ footer .links a{display:inline-block;padding-block:12px}
   <div class="price" style="color:var(--ink);text-align:left">
    <div class="amt">$29<small>pago único</small></div>
    <ul><li>PDF de 44 páginas y los 19 prompts</li><li>Sin cuotas ni suscripción</li><li>Pago seguro con Whop; accedes con el mismo correo del pago</li></ul>
-   <a class="btn" id="buy" href="https://whop.com/sellerops-guides/sellerop-kit-sistema-7-dias/" target="_blank" rel="noopener">Quiero el Kit · $29 USD</a>
+   <a class="btn" id="buy" href="https://whop.com/sellerops-guides/sellerop-kit-sistema-7-dias/" target="_blank" rel="noopener">Quiero el Kit</a>
    <p class="tiny" style="margin-top:14px"><a href="#lista">¿Quieres seguir hasta el día 30? Conoce Sellerop Studio</a></p><p class="tiny" style="margin-top:10px"><b>Garantía de ejecución:</b> haz el trabajo de los 7 días y guarda tu evidencia. Si lo completaste y no te sirvió, escríbeme por correo a <a href="mailto:founderk@gmail.com">founderk@gmail.com</a> dentro de los 14 días desde tu compra, con tu evidencia, y te devolvemos tu dinero.</p>
   </div>
  </div>
@@ -325,9 +335,9 @@ footer .links a{display:inline-block;padding-block:12px}
   <details><summary>¿Me prometen ventas o ingresos?</summary><p>No. El Kit reduce el riesgo de equivocarte y te enseña a medir, pero no garantiza resultados.</p></details>
   <details><summary>¿Qué asistente de IA necesito?</summary><p>Uno de uso general sirve. Los prompts se pegan después de tu Ficha del proyecto y se pueden usar con la versión gratuita; los límites de cada herramienta cambian, así que el Kit te indica cómo verificarlos.</p></details>
   <details><summary>¿Cómo recibo el Kit?</summary><p>Pagas en Whop, recibes un correo de confirmación y accedes con el mismo correo que usaste al pagar. Pago único.</p></details>
-  <details><summary>¿Se guardan mis respuestas del test?</summary><p>No. El test funciona en tu navegador y no guardamos tus respuestas. Es orientativo: no mide la calidad de tu idea ni predice ventas.</p></details>
+  <details><summary>¿Se guardan mis respuestas del test?</summary><p>No. El test funciona en tu navegador y no guardamos tus respuestas. Solo si pides tu primer paso por correo guardamos tu nombre, tu correo y tu punto más bajo, para enviártelo. Puedes darte de baja cuando quieras. El test es orientativo: no mide la calidad de tu idea ni predice ventas.</p></details>
   <details><summary>¿Está disponible en mi país?</summary><p>Si tu país no está disponible en la plataforma de pago, te lo avisamos antes de cobrar.</p></details>
-  <div class="cta" style="margin-top:34px"><a class="btn" href="#comprar">Quiero el Kit · $29 USD</a></div>
+  <div class="cta" style="margin-top:34px"><a class="btn" href="#comprar">Quiero el Kit</a></div>
   </div>
  </section>
 
@@ -337,6 +347,7 @@ footer .links a{display:inline-block;padding-block:12px}
   <div class="links"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="reembolsos.html">Reembolsos</a></div>
  </footer>
 </div>
+<div class="mdl" id="mdl" role="dialog" aria-modal="true" aria-label="Recibe tu primer paso por correo"><div class="box"><button class="x" id="mdlx" aria-label="Cerrar">×</button><iframe id="mdlf" title="Formulario: recibe tu primer paso por correo" loading="lazy"></iframe></div></div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -377,10 +388,11 @@ function render(){
   var ah='';for(var i=0;i<5;i++)ah+='<li class="'+(i===lo?'low':'')+'"><span>'+AX[i].k+'</span><span>'+ax(i)+' / 20</span></li>';
   p.innerHTML='<div class="res"><div class="lab">Tu resultado</div>'+dots()+'<div class="total">'+t+'<small>/ 100</small></div><h3>'+title+'</h3><ul class="axes">'+ah+'</ul>'+
    '<p>Tu punto más bajo es <b>'+AX[lo].k+'</b> ('+lv+' de 20). En el Kit corresponde a '+dtxt+': '+tail+'</p>'+
-   '<div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="#comprar">'+(hi?'Ver el Kit · $29 USD':'Quiero el Kit · $29 USD')+'</a><a class="btn line" href="#dias">Ver mi semana</a><button class="btn line" id="redo">Repetir</button></div>'+
-   '<p class="fine" style="margin-top:4px">Guarda tu resultado con una captura de pantalla. ¿Tienes dudas sobre él? <a href="https://www.instagram.com/dome.sellerop/" target="_blank" rel="noopener">Escríbeme por DM en Instagram</a>.</p>'+
+   '<div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="#comprar">'+(hi?'Ver el Kit':'Quiero el Kit')+'</a><a class="btn line" href="#dias">Ver mi semana</a><button class="btn line" id="redo">Repetir</button></div>'+
+   '<div class="mail"><h4>Recibe tu primer paso por correo</h4><p>Te envío gratis qué hacer primero en <b>'+AX[lo].k+'</b>, tu punto más bajo, y cómo seguir esta semana. Sin spam: te das de baja cuando quieras.</p><button class="btn" id="mailbtn">Envíamelo gratis</button></div>'+'<p class="fine" style="margin-top:4px">¿Tienes dudas sobre tu resultado? <a href="https://www.instagram.com/dome.sellerop/" target="_blank" rel="noopener">Escríbeme por DM en Instagram</a>.</p>'+
    (hi?'<p>Cuando abra <b>Sellerop Studio</b> ya tendrás lo básico: <a href="#lista">apúntate a la lista de espera</a>.</p>':'')+'<p class="fine">Orientativo: no mide la calidad de tu idea ni predice ventas ni ingresos.</p></div>';
   $('redo').onclick=function(){ans.fill(null);cur=0;done=false;render();mark()};
+  $('mailbtn').onclick=function(){openMail(AX[lo].k)};
   mark();return;
  }
  var q=Q[cur],answered=ans.filter(function(x){return x!==null}).length;
@@ -402,7 +414,13 @@ function mark(){
   else{$('diasTxt').textContent='Según tu test, te conviene empezar por el día '+d+'. Puedes seguir el orden completo si prefieres.'}}
  else{$('diasTxt').textContent=DAYS_DEF}
 }
+var FORM_URL="https://forms.fillout.com/t/jq5tL5XKVrus",lastFocus=null;
+function openMail(eje){var m=$('mdl'),f=$('mdlf');lastFocus=document.activeElement;
+ f.src=FORM_URL+'?eje='+encodeURIComponent(eje);m.classList.add('on');document.body.style.overflow='hidden';$('mdlx').focus()}
+function closeMail(){var m=$('mdl');m.classList.remove('on');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&$('mdl').classList.contains('on'))closeMail()});
 function toast(t){var el=$('toast');el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on')},3200)}
+$('mdlx').onclick=closeMail;$('mdl').onclick=function(e){if(e.target===this)closeMail()};
 $('buy').onclick=function(e){if(!CHECKOUT_URL){e.preventDefault();toast('Borrador: el enlace de pago de Whop se añade antes de publicar.')}};
 
 var LAUNCH=new Date('2026-12-01T00:00:00-04:00'),RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
