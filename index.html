@@ -301,8 +301,20 @@ details[open] .faq-plus{transform:rotate(45deg)}
 <div style="background: var(--violet); color: var(--ivory); border-radius: 28px; padding: 36px; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; color: var(--lime); font-size: 13px; font-weight: 600; letter-spacing: 4px">SELLEROP STUDIO · NO LO HACES SOLO</p>
 <h3 class="serif" style="margin: 0; font-size: 36px; line-height: 1.08">Copiloto y revisión de tu producto<span style="color: var(--lime)">.</span></h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--lavender)">Únete a la lista de espera y te aviso cuando abra.</p>
-<a href="test.html#lista" style="align-self: flex-start; background: var(--lime); color: var(--aubergine); text-decoration: none; font-weight: 600; font-size: 16px; border-radius: 999px; padding: 16px 26px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 8px">Unirme a la lista de espera <span aria-hidden="true">→</span></a>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--lavender)">Deja tu correo y te aviso cuando abra.</p>
+<div id="wl" style="display: flex; flex-direction: column; gap: 10px">
+<form id="wlf" novalidate style="display: flex; flex-wrap: wrap; gap: 10px">
+<label for="wle" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Tu correo</label>
+<input type="email" id="wle" name="EMAIL" autocomplete="email" inputmode="email" placeholder="tu@correo.com" required style="flex: 1 1 200px; min-width: 0; min-height: 52px; border-radius: 999px; border: 1px solid var(--lavender); background: var(--ivory); color: var(--charcoal); padding: 0 22px; font-family: inherit; font-size: 16px; box-sizing: border-box">
+<button type="submit" id="wlb" style="min-height: 52px; border-radius: 999px; border: none; background: var(--lime); color: var(--aubergine); font-family: inherit; font-weight: 600; font-size: 16px; padding: 0 24px; cursor: pointer">Avísame cuando abra</button>
+</form>
+<p id="wlerr" role="alert" style="margin: 0; font-size: 14px; color: var(--lime)"></p>
+<p id="wlnote" style="margin: 0; font-size: 13px; color: var(--lavender)">Solo te aviso de la apertura. Te das de baja con un clic. <a href="privacidad.html" style="color: var(--lavender)">Privacidad</a>.</p>
+<div id="wlok" role="status" aria-live="polite" style="display: none; background: var(--ivory); color: var(--charcoal); border-radius: 20px; padding: 20px 22px">
+<p class="serif" style="margin: 0 0 6px; font-size: 26px; line-height: 1.1">Listo, tienes tu lugar<span style="color: var(--violet)">.</span></p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5">Te escribiré desde <b>contact@suhgroupllc.com</b> antes de la apertura. Si no lo ves, revisa Promociones o Spam.</p>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -352,5 +364,21 @@ details[open] .faq-plus{transform:rotate(45deg)}
 </div>
 
 </div>
+<script>
+(function(){
+var WL_ACTION="https://7869d22c.sibforms.com/serve/MUIFANSFuJcztFkv6S-p0syWn20O-M7cqSn1oJC1bMc0khC_9XFIx7gfC53ImhSE302WjILeFPpnvFlksxXFKZta2V6pttNb_B2VzsHJFdeQedqNQbdPOam_LZnxQPDMKlxePMO967Zy0i_-yxcTaMbo0HcS1CJ4_68dhywNVX6zb0nM3Xjh6opMTMtZrCwI3ufT-3ZH5VvWLJaNbg==?isAjax=1";
+var $=function(i){return document.getElementById(i)};
+var f=$('wlf');if(!f)return;var e=$('wle'),b=$('wlb'),er=$('wlerr');
+function done(){f.style.display='none';$('wlnote').style.display='none';er.textContent='';$('wlok').style.display='block'}
+f.addEventListener('submit',function(ev){ev.preventDefault();er.textContent='';
+var v=(e.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){er.textContent='Escribe un correo válido.';e.focus();return}
+b.disabled=true;b.textContent='Enviando…';
+var d=new FormData();d.append('EMAIL',v);d.append('email_address_check','');d.append('locale','es');
+fetch(WL_ACTION,{method:'POST',body:d}).then(function(r){return r.json().catch(function(){return{success:r.ok}})},function(){return fetch(WL_ACTION,{method:'POST',body:d,mode:'no-cors'}).then(function(){return{success:true}})})
+.then(function(j){if(j&&j.success!==false){done();try{localStorage.setItem('wl','1')}catch(_){}}else{throw 0}})
+.catch(function(){b.disabled=false;b.textContent='Avísame cuando abra';er.textContent='No se pudo enviar. Inténtalo de nuevo en un momento.'})});
+try{if(localStorage.getItem('wl')==='1')done()}catch(_){}
+})();
+</script>
 </body>
 </html>
